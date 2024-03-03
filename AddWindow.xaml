@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="AddWindow" Height="250" Width="400">
     <Grid>
-        
+        <Button x:Name="canselBtn" Content="Cansel"
+                HorizontalAlignment="Left" 
+                Margin="53,169,0,0" 
+                VerticalAlignment="Top" 
+                Width="122"/>
+        <Button x:Name="okBtn" Content="Add" 
+                HorizontalAlignment="Left" 
+                Margin="244,169,0,0" 
+                VerticalAlignment="Top" 
+                Width="124"/>
+        <TextBox x:Name="txtWorkerName" HorizontalAlignment="Left" 
+                 Margin="270,26,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="120"/>
+        <TextBox x:Name="txtIdBoss" HorizontalAlignment="Left" 
+            Margin="270,64,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" 
+            Margin="270,99,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
+
     </Grid>
 </Window>

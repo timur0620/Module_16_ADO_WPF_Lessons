@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,17 @@ namespace Module_16_ADO_WPF_Lessons
         public AddWindow()
         {
             InitializeComponent();
+        }
+        public AddWindow(DataRow row):this()
+        {
+            canselBtn.Click += delegate { this.DialogResult = false; };
+            okBtn.Click += delegate
+            {
+                row["WorkerName"] = txtWorkerName.Text;
+                row["IdBoss"] = txtIdBoss.Text;
+                row["IdDescription"] = txtDescription.Text;
+                this.DialogResult = true;
+            };
         }
     }
 }

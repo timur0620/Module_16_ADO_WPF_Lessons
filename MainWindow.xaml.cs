@@ -101,22 +101,22 @@ namespace Module_16_ADO_WPF_Lessons
             row.BeginEdit();
             adapter.Update(dt);
         }
-        //private void AllViewShow(object sender, RoutedEventArgs e)
-        //{
-        //    new AllView().ShowDialog();
-        //}
-        //private void MenuItemAddClick(object sender, RoutedEventArgs e)
-        //{
-        //    DataRow r = dt.NewRow();
-        //    AddWindow add = new AddWindow(r);
-        //    add.ShowDialog(); 
-            
-        //    if (add.DialogResult.Value)
-        //    {
-        //        dt.Rows.Add(r);
-        //        adapter.Update(dt);
-        //    }
-        //}
+        private void AllViewShow(object sender, RoutedEventArgs e)
+        {
+            new AllView().ShowDialog();
+        }
+        private void MenuItemAddClick(object sender, RoutedEventArgs e)
+        {
+            DataRow r = dt.NewRow();
+            AddWindow add = new AddWindow(r);
+            add.ShowDialog();
+
+            if (add.DialogResult.Value)
+            {
+                dt.Rows.Add(r);
+                adapter.Update(dt);
+            }
+        }
         private void MenuItemDeleteClick(object sender, RoutedEventArgs e)
         {
             row = (DataRowView)gridView.SelectedItem;
